@@ -1,31 +1,19 @@
-# python-api-challenge
+# Python-API-challenge
 
-WeatherPy
-Script - perform weather checks and to visualize weather in 500+ unique cities around the world based on latitude and longitude coordinates using Openweather API. 
-Scatterplots to visualize relationship between latitude and other variables such as humidity, maximum temperature, cloudiness and wind speed. 
-Linear regression to observe trends in northern vs southern hemisphere cities in comparing latititude with humidity, and other variables. 
-* Include a print log of each city as it's being processed with the city number and city name.
-* Save a CSV of all retrieved data and a PNG image for each scatter plot.
+**These files uses API requests to obtain data from external databases such as OpenWeather and Google. Subsequently, pandas, matplotlib, linregress, and gmaps were utilized to create data visualization for further discussion and analysis.**
 
+**WeatherPy: weather checks are performed in 500+ unique random cities with various weather conditions per city**  
+  * Script includes 
+    * Generate Openweather API calls 500+ randomly generated cities around the world based on latitude and longitude coordinates
+    * Pull weather conditions from API calls and append to database such as maximum temperature, humidity, wind speed, and cloudiness 
+    * Handle exceptions using try and except functions 
+    * Export data and save plots to external files 
+    * Create scatter plots to visualize relationship between latitude and other weather conditions listed previously 
+    * Construct function to perform linear regressions and plots for trend analysis 
 
-vacationpy 
-Use jupyter-gmaps and the Google Places API to use weather data to plan vacation
-* Create a heat map that displays the humidity for every city from the part I of the homework.
-
-  ![heatmap](Images/heatmap.png)
-
-* Narrow down the DataFrame to find your ideal weather condition. For example:
-
-  * A max temperature lower than 80 degrees but higher than 70.
-
-  * Wind speed less than 10 mph.
-
-  * Zero cloudiness.
-
-  * Drop any rows that don't contain all three conditions. You want to be sure the weather is ideal.
-
-  * **Note:** Feel free to adjust to your specifications but be sure to limit the number of rows returned by your API requests to a reasonable number.
-
-* Using Google Places API to find the first hotel for each city located within 5000 meters of your coordinates.
-
-* Plot the hotels on top of the humidity heatmap with each pin containing the **Hotel Name**, **City**, and **Country**.
+**VacationPy: using prior data from WeatherPy, cities are narrowed down by preferred weather criteria and visualized with google heat maps and hotel pins** 
+  * Script includes
+    * Create heat map for humidity for every city generated in WeatherPy
+    * Narrow dataframe by preferred weather criteria 
+    * Search for nearby hotels with specific parameters using Google API for preferred locations
+    * Add additional layer of hotel pins to the heat map for preferred locations only 
